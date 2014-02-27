@@ -11,6 +11,8 @@
  * @param string $json  The JSON data, pre-encoded
  * @param string $istr  The indentation string
  *
+ * @link https://github.com/ryanuber/projects/blob/master/PHP/JSON/jsonpp.php
+ *
  * @return string
  */
 function jsonpp($json, $istr='  ')
