@@ -21,7 +21,7 @@ function jsonpp($json, $istr='  ')
     for($p=$q=$i=0; isset($json[$p]); $p++)
     {
         $json[$p] == '"' && ($p>0?$json[$p-1]:'') != '\\' && $q=!$q;
-        if(!$q && strchr(" \t\n", $json[$p])){continue;}
+        if(!$q && strchr(" \t\n\r", $json[$p])){continue;}
         if(strchr('}]', $json[$p]) && !$q && $i--)
         {
             strchr('{[', $json[$p-1]) || $result .= "\n".str_repeat($istr, $i);
